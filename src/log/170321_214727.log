@@ -1,0 +1,158 @@
+[2017-03-21 21:47:27,476] INFO     < 2700: 3628> New process.. 
+[2017-03-21 21:47:27,507] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-21 21:47:27,569] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-21 21:47:27,585] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-21 21:47:27,601] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-21 21:47:27,648] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\ole32.dll
+[2017-03-21 21:47:27,648] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\advapi32.dll
+[2017-03-21 21:47:27,678] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\rpcrt4.dll
+[2017-03-21 21:47:27,694] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\secur32.dll
+[2017-03-21 21:47:27,710] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\msvcrt.dll
+[2017-03-21 21:47:27,742] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\oleaut32.dll
+[2017-03-21 21:47:27,757] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\shell32.dll
+[2017-03-21 21:47:27,789] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\shlwapi.dll
+[2017-03-21 21:47:27,803] INFO     < 2700: 3628> Load DLL \WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
+[2017-03-21 21:47:27,819] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\ws2_32.dll
+[2017-03-21 21:47:27,835] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\ws2help.dll
+[2017-03-21 21:47:27,867] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\rasapi32.dll
+[2017-03-21 21:47:27,914] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\rasman.dll
+[2017-03-21 21:47:27,928] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\netapi32.dll
+[2017-03-21 21:47:27,960] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\tapi32.dll
+[2017-03-21 21:47:27,992] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\rtutils.dll
+[2017-03-21 21:47:28,007] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\winmm.dll
+[2017-03-21 21:47:28,039] INFO     < 2700: 3628> Load DLL \WINDOWS\WinSxS\x86_Microsoft.Windows.GdiPlus_6595b64144ccf1df_1.0.2600.5512_x-ww_dfb54e0c\GdiPlus.dll
+[2017-03-21 21:47:28,069] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\imm32.dll
+[2017-03-21 21:47:28,069] DEBUG    Pydbg breakpoint hits!
+[2017-03-21 21:47:28,069] DEBUG    < 2700: 3628> [*] Pydbg first point at 0x7c92120f, HookPoints init...
+[2017-03-21 21:47:28,132] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpen()[0x4a41963e]: Failed setting breakpoint at 4a41963e
+[2017-03-21 21:47:28,132] ERROR    [!] Fail to hook winhttp.dll.WinHttpConnect()[0x4a4199a5]: Failed setting breakpoint at 4a4199a5
+[2017-03-21 21:47:28,148] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpenRequest()[0x4a4337cc]: Failed setting breakpoint at 4a4337cc
+[2017-03-21 21:47:28,148] ERROR    [!] Fail to hook winhttp.dll.WinHttpSendRequest()[0x4a420281]: Failed setting breakpoint at 4a420281
+[2017-03-21 21:47:28,210] DEBUG    22 functions, 18 hook success.
+[2017-03-21 21:47:28,242] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\lpk.dll
+[2017-03-21 21:47:28,289] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\usp10.dll
+[2017-03-21 21:47:29,178] INFO     < 2700: 3628> Register Open Key: 0x7c =  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{0D5AF2B5-F3AE-4fb4-A7F9-0DC68E21E8B4}\VersionIndependentProgID 
+[2017-03-21 21:47:29,678] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\rsaenh.dll
+[2017-03-21 21:47:30,194] INFO     < 2700: 3628> Register query Key 18809FD5FC5BF3DEE8E752EB51ABA778 = [truncated at 1024 bytes..]
+[2017-03-21 21:47:30,273] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\userenv.dll
+[2017-03-21 21:47:30,789] INFO     < 2700: 3628> Register Open Key: 0x80 =  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{0D5AF2B5-F3AE-4fb4-A7F9-0DC68E21E8B4}\VersionIndependentProgID 
+[2017-03-21 21:47:30,928] ERROR    Exception You must not use 8-bit bytestrings unless you use a text_factory that can interpret 8-bit bytestrings (like text_factory = str). It is highly recommended that you instead just switch your application to Unicode strings. in exit_hook of Advapi32.dll.RegQueryValueExA()[0x77da7aab]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 676, in RegQueryValueEx_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\database.py", line 53, in update
+    c.execute("insert Into info values (?,?,?,?,?,?,?)",data)
+Programmi[truncate at 1000 bytes..]
+[2017-03-21 21:47:31,319] INFO     < 2700: 3628> Create file C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\15c51466c1e193ee81662d0a4a72dcb5.log
+[2017-03-21 21:47:31,819] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\MSCTF.dll
+[2017-03-21 21:47:32,553] INFO     < 2700: 3628> Create file C:\\15c51466c1e193ee81662d0a4a72dcb5.exe
+[2017-03-21 21:47:32,757] ERROR    Exception 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte in exit_hook of kernel32.dll.ReadFile()[0x7c801812]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 456, in ReadFile_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 447, in detail_info
+    return [unicode(self.data, "utf-8"),int(self.size)]
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte
+
+[2017-03-21 21:47:32,851] INFO     < 2700: 3628> Read file 3072 bytes: 
+[2017-03-21 21:47:32,992] INFO     < 2700: 3628> Register query Key {0D5AF2B5-F3AE-4fb4-A7F9-0DC68E21E8B4} = .......|.....L..i..|...|......|...........{x..g.KX..t.N.......%R...1...B;%R........E.$R.....$R../.E..$R;MainWndTitle=.:R..%R0..fD@
+[2017-03-21 21:47:33,117] INFO     < 2700: 3628> Register query Key {0D5AF2B5-F3AE-4fb4-A7F9-0DC68E21E8B4} = .......|.....L..i..|...|......|...........{x..g.KX..t.N.......%R...1...B;%R........E.$R.....$R../.E..$R;MainWndTitle=.:R..%R0..fD@
+[2017-03-21 21:47:33,289] INFO     < 2700: 3628> Create file C:\Documents and Settings\Administrator\Local Settings\Application Data\15c51466c1e193ee81662d0a4a72dcb5\15c51466c1e193ee81662d0a4a72dcb5.exe
+[2017-03-21 21:47:33,539] ERROR    Exception 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte in exit_hook of kernel32.dll.ReadFile()[0x7c801812]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 456, in ReadFile_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 447, in detail_info
+    return [unicode(self.data, "utf-8"),int(self.size)]
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte
+
+[2017-03-21 21:47:33,632] INFO     < 2700: 3628> Read file 3072 bytes: 
+[2017-03-21 21:47:33,694] INFO     < 2700: 3628> Create file C:\15c51466c1e193ee81662d0a4a72dcb5.exe
+[2017-03-21 21:47:33,851] ERROR    Exception 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte in exit_hook of kernel32.dll.ReadFile()[0x7c801812]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 456, in ReadFile_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 447, in detail_info
+    return [unicode(self.data, "utf-8"),int(self.size)]
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x90 in position 2: invalid start byte
+
+[2017-03-21 21:47:33,944] INFO     < 2700: 3628> Read file 3072 bytes: 
+[2017-03-21 21:47:34,664] INFO     < 2700: 3628> Create file C:\Documents and Settings\Administrator\Local Settings\Application Data\15c51466c1e193ee81662d0a4a72dcb5\Skin.7z
+[2017-03-21 21:47:34,867] ERROR    Exception 'utf8' codec can't decode byte 0xbc in position 2: invalid start byte in exit_hook of kernel32.dll.WriteFile()[0x7c810e17]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 482, in WriteFile_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 447, in detail_info
+    return [unicode(self.data, "utf-8"),int(self.size)]
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbc in position 2: invalid start byte
+
+[2017-03-21 21:47:34,960] ERROR    Exception 'utf8' codec can't decode byte 0x89 in position 2: invalid start byte in exit_hook of kernel32.dll.WriteFile()[0x7c810e17]:
+ Traceback (most recent call last):
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_context.py", line 253, in on_exit
+    self.func.exit_hook(self, dbg)
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 482, in WriteFile_exit_hook
+    info.save()
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\info.py", line 52, in save
+    data_man.update(self.category,data,self.detail_info())
+  File "C:\Documents and Settings\Administrator\....\source code\source code\Re\src\hook_manager.py", line 447, in detail_info
+    return [unicode(self.data, "utf-8"),int(self.size)]
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x89 in position 2: invalid start byte
+
+[2017-03-21 21:47:35,023] INFO     < 2700: 3628> Create file C:\Documents and Settings\Administrator\Local Settings\Application Data\15c51466c1e193ee81662d0a4a72dcb5\CustomSkin\DefSkin.7z
+[2017-03-21 21:47:35,898] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\setupapi.dll
+[2017-03-21 21:47:36,648] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\clbcatq.dll
+[2017-03-21 21:47:36,678] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\comres.dll
+[2017-03-21 21:47:36,710] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\version.dll
+[2017-03-21 21:47:37,148] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\linkinfo.dll
+[2017-03-21 21:47:37,164] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\ntshrui.dll
+[2017-03-21 21:47:37,194] INFO     < 2700: 3628> Load DLL \WINDOWS\system32\atl.dll
+[2017-03-21 21:47:38,476] INFO     < 2700: 3628> Create process: NULL
+[2017-03-21 21:47:38,476] INFO     < 2364:  448> New process.. 
+[2017-03-21 21:47:38,507] INFO     < 2364:  448> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-21 21:47:38,710] INFO     < 2364:  448> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-21 21:47:38,726] INFO     < 2364:  448> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-21 21:47:38,742] INFO     < 2364:  448> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-21 21:47:38,819] INFO     < 2364:  448> Load DLL \WINDOWS\system32\ole32.dll
+[2017-03-21 21:47:38,835] INFO     < 2364:  448> Load DLL \WINDOWS\system32\advapi32.dll
+[2017-03-21 21:47:38,867] INFO     < 2364:  448> Load DLL \WINDOWS\system32\rpcrt4.dll
+[2017-03-21 21:47:38,914] INFO     < 2364:  448> Load DLL \WINDOWS\system32\secur32.dll
+[2017-03-21 21:47:38,944] INFO     < 2364:  448> Load DLL \WINDOWS\system32\msvcrt.dll
+[2017-03-21 21:47:38,960] INFO     < 2364:  448> Load DLL \WINDOWS\system32\oleaut32.dll
+[2017-03-21 21:47:38,992] INFO     < 2364:  448> Load DLL \WINDOWS\system32\shell32.dll
+[2017-03-21 21:47:39,007] INFO     < 2364:  448> Load DLL \WINDOWS\system32\shlwapi.dll
+[2017-03-21 21:47:39,039] INFO     < 2364:  448> Load DLL \WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
+[2017-03-21 21:47:39,053] INFO     < 2364:  448> Load DLL \WINDOWS\system32\ws2_32.dll
+[2017-03-21 21:47:39,101] INFO     < 2364:  448> Load DLL \WINDOWS\system32\ws2help.dll
+[2017-03-21 21:47:39,132] INFO     < 2364:  448> Load DLL \WINDOWS\system32\rasapi32.dll
+[2017-03-21 21:47:39,148] INFO     < 2364:  448> Load DLL \WINDOWS\system32\rasman.dll
+[2017-03-21 21:47:39,178] INFO     < 2364:  448> Load DLL \WINDOWS\system32\netapi32.dll
+[2017-03-21 21:47:39,210] INFO     < 2364:  448> Load DLL \WINDOWS\system32\tapi32.dll
+[2017-03-21 21:47:39,242] INFO     < 2364:  448> Load DLL \WINDOWS\system32\rtutils.dll
+[2017-03-21 21:47:39,273] INFO     < 2364:  448> Load DLL \WINDOWS\system32\winmm.dll
+[2017-03-21 21:47:39,303] INFO     < 2364:  448> Load DLL \WINDOWS\WinSxS\x86_Microsoft.Windows.GdiPlus_6595b64144ccf1df_1.0.2600.5512_x-ww_dfb54e0c\GdiPlus.dll
+[2017-03-21 21:47:39,303] INFO     < 2364:  448> Load DLL \WINDOWS\system32\imm32.dll
+[2017-03-21 21:47:39,319] DEBUG    Pydbg breakpoint hits!
+[2017-03-21 21:47:39,335] INFO     < 2364:  448> Load DLL \WINDOWS\system32\lpk.dll
+[2017-03-21 21:47:39,351] INFO     < 2364:  448> Load DLL \WINDOWS\system32\usp10.dll
+[2017-03-21 21:47:39,428] INFO     < 2364:  448> Load DLL \WINDOWS\system32\rsaenh.dll
+[2017-03-21 21:47:39,507] INFO     < 2364:  448> Load DLL \WINDOWS\system32\userenv.dll

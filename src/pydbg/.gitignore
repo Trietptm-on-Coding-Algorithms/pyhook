@@ -1,0 +1,13 @@
+/__init__.pyc
+/breakpoint.pyc
+/defines.pyc
+/hardware_breakpoint.pyc
+/memory_breakpoint.pyc
+/memory_snapshot_block.pyc
+/memory_snapshot_context.pyc
+/my_ctypes.pyc
+/pdx.pyc
+/pydbg.pyc
+/pydbg_client.pyc
+/system_dll.pyc
+/windows_h.pyc

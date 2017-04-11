@@ -1,0 +1,7 @@
+[2017-03-24 10:30:58,395] INFO     < 3496:  380> New process.. 
+[2017-03-24 10:30:58,427] INFO     < 3496:  380> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-24 10:30:58,473] INFO     < 3496:  380> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-24 10:30:58,506] INFO     < 3496:  380> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-24 10:30:58,520] INFO     < 3496:  380> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-24 10:30:58,520] DEBUG    Pydbg breakpoint hits!
+[2017-03-24 10:30:58,520] DEBUG    < 3496:  380> [*] Pydbg first point at 0x7c92120f, HookPoints init...

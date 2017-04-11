@@ -1,0 +1,23 @@
+[2017-03-22 16:37:05,910] INFO     < 3816: 3728> New process.. 
+[2017-03-22 16:37:05,940] INFO     < 3816: 3728> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-22 16:37:05,957] INFO     < 3816: 3728> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-22 16:37:06,003] INFO     < 3816: 3728> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-22 16:37:06,019] INFO     < 3816: 3728> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-22 16:37:06,019] DEBUG    Pydbg breakpoint hits!
+[2017-03-22 16:37:06,019] DEBUG    < 3816: 3728> [*] Pydbg first point at 0x7c92120f, HookPoints init...
+[2017-03-22 16:37:06,019] ERROR    [!] Fail to hook ws2_32.dll.send()[0x71a24c27]: Failed setting breakpoint at 71a24c27
+[2017-03-22 16:37:06,035] ERROR    [!] Fail to hook ws2_32.dll.WSASend()[0x71a268fa]: Failed setting breakpoint at 71a268fa
+[2017-03-22 16:37:06,035] ERROR    [!] Fail to hook ws2_32.dll.recv()[0x71a2676f]: Failed setting breakpoint at 71a2676f
+[2017-03-22 16:37:06,035] ERROR    [!] Fail to hook ws2_32.dll.WSARecv()[0x71a24cb5]: Failed setting breakpoint at 71a24cb5
+[2017-03-22 16:37:06,035] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpen()[0x4a41963e]: Failed setting breakpoint at 4a41963e
+[2017-03-22 16:37:06,051] ERROR    [!] Fail to hook winhttp.dll.WinHttpConnect()[0x4a4199a5]: Failed setting breakpoint at 4a4199a5
+[2017-03-22 16:37:06,051] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpenRequest()[0x4a4337cc]: Failed setting breakpoint at 4a4337cc
+[2017-03-22 16:37:06,065] ERROR    [!] Fail to hook winhttp.dll.WinHttpSendRequest()[0x4a420281]: Failed setting breakpoint at 4a420281
+[2017-03-22 16:37:06,096] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExA()[0x77da7842]: Failed setting breakpoint at 77da7842
+[2017-03-22 16:37:06,096] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExW()[0x77da6a9f]: Failed setting breakpoint at 77da6a9f
+[2017-03-22 16:37:06,096] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExA()[0x77dae9e4]: Failed setting breakpoint at 77dae9e4
+[2017-03-22 16:37:06,096] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExW()[0x77da775c]: Failed setting breakpoint at 77da775c
+[2017-03-22 16:37:06,112] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExA()[0x77daead7]: Failed setting breakpoint at 77daead7
+[2017-03-22 16:37:06,112] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExW()[0x77dad757]: Failed setting breakpoint at 77dad757
+[2017-03-22 16:37:06,112] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExA()[0x77da7aab]: Failed setting breakpoint at 77da7aab
+[2017-03-22 16:37:06,112] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExW()[0x77da6fef]: Failed setting breakpoint at 77da6fef

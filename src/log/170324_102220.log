@@ -1,0 +1,37 @@
+[2017-03-24 10:22:20,381] INFO     < 1092: 2236> New process.. 
+[2017-03-24 10:22:20,411] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-24 10:22:20,459] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-24 10:22:20,490] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-24 10:22:20,520] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-24 10:22:20,520] DEBUG    Pydbg breakpoint hits!
+[2017-03-24 10:22:20,520] DEBUG    < 1092: 2236> [*] Pydbg first point at 0x7c92120f, HookPoints init...
+[2017-03-24 10:22:20,520] ERROR    [!] Fail to hook ws2_32.dll.send()[0x71a24c27]: Failed setting breakpoint at 71a24c27
+[2017-03-24 10:22:20,520] ERROR    [!] Fail to hook ws2_32.dll.WSASend()[0x71a268fa]: Failed setting breakpoint at 71a268fa
+[2017-03-24 10:22:20,520] ERROR    [!] Fail to hook ws2_32.dll.recv()[0x71a2676f]: Failed setting breakpoint at 71a2676f
+[2017-03-24 10:22:20,520] ERROR    [!] Fail to hook ws2_32.dll.WSARecv()[0x71a24cb5]: Failed setting breakpoint at 71a24cb5
+[2017-03-24 10:22:20,520] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpen()[0x4a41963e]: Failed setting breakpoint at 4a41963e
+[2017-03-24 10:22:20,536] ERROR    [!] Fail to hook winhttp.dll.WinHttpConnect()[0x4a4199a5]: Failed setting breakpoint at 4a4199a5
+[2017-03-24 10:22:20,536] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpenRequest()[0x4a4337cc]: Failed setting breakpoint at 4a4337cc
+[2017-03-24 10:22:20,536] ERROR    [!] Fail to hook winhttp.dll.WinHttpSendRequest()[0x4a420281]: Failed setting breakpoint at 4a420281
+[2017-03-24 10:22:20,568] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExA()[0x77da7842]: Failed setting breakpoint at 77da7842
+[2017-03-24 10:22:20,568] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExW()[0x77da6a9f]: Failed setting breakpoint at 77da6a9f
+[2017-03-24 10:22:20,568] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExA()[0x77dae9e4]: Failed setting breakpoint at 77dae9e4
+[2017-03-24 10:22:20,568] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExW()[0x77da775c]: Failed setting breakpoint at 77da775c
+[2017-03-24 10:22:20,584] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExA()[0x77daead7]: Failed setting breakpoint at 77daead7
+[2017-03-24 10:22:20,584] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExW()[0x77dad757]: Failed setting breakpoint at 77dad757
+[2017-03-24 10:22:20,584] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExA()[0x77da7aab]: Failed setting breakpoint at 77da7aab
+[2017-03-24 10:22:20,584] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExW()[0x77da6fef]: Failed setting breakpoint at 77da6fef
+[2017-03-24 10:22:20,584] DEBUG    22 functions, 6 hook success.
+[2017-03-24 10:22:20,598] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\imm32.dll
+[2017-03-24 10:22:20,631] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\advapi32.dll
+[2017-03-24 10:22:20,645] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\rpcrt4.dll
+[2017-03-24 10:22:20,661] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\secur32.dll
+[2017-03-24 10:22:20,693] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\lpk.dll
+[2017-03-24 10:22:20,709] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\usp10.dll
+[2017-03-24 10:22:20,959] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\MSCTF.dll
+[2017-03-24 10:22:21,006] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\msvcrt.dll
+[2017-03-24 10:22:21,020] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\version.dll
+[2017-03-24 10:22:21,052] INFO     < 1092: 2236> Unload DLL \WINDOWS\system32\version.dll 
+[2017-03-24 10:22:21,068] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\MSCTFIME.IME
+[2017-03-24 10:22:21,131] INFO     < 1092: 2236> Load DLL \WINDOWS\system32\ole32.dll
+[2017-03-24 10:22:24,036] INFO     < 1092: 2236> Exit process.. 

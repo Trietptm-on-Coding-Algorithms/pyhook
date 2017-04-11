@@ -1,0 +1,7 @@
+[2017-03-25 16:14:33,463] INFO     < 3684: 4040> New process.. 
+[2017-03-25 16:14:33,494] INFO     < 3684: 4040> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-25 16:14:33,526] INFO     < 3684: 4040> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-25 16:14:33,572] INFO     < 3684: 4040> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-25 16:14:33,588] INFO     < 3684: 4040> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-25 16:14:33,588] DEBUG    Pydbg breakpoint hits!
+[2017-03-25 16:14:33,588] DEBUG    < 3684: 4040> [*] Pydbg first point at 0x7c92120f, HookPoints init...

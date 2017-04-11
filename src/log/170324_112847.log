@@ -1,0 +1,48 @@
+[2017-03-24 11:28:48,177] INFO     < 3224: 3420> New process.. 
+[2017-03-24 11:28:48,443] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-24 11:28:48,598] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-24 11:28:48,881] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-24 11:28:48,990] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-24 11:28:48,990] DEBUG    Pydbg breakpoint hits!
+[2017-03-24 11:28:48,990] DEBUG    < 3224: 3420> [*] Pydbg first point at 0x7c92120f, HookPoints init...
+[2017-03-24 11:28:49,020] ERROR    [!] Fail to hook ws2_32.dll.send()[0x71a24c27]: Failed setting breakpoint at 71a24c27
+[2017-03-24 11:28:49,036] ERROR    [!] Fail to hook ws2_32.dll.WSASend()[0x71a268fa]: Failed setting breakpoint at 71a268fa
+[2017-03-24 11:28:49,052] ERROR    [!] Fail to hook ws2_32.dll.recv()[0x71a2676f]: Failed setting breakpoint at 71a2676f
+[2017-03-24 11:28:49,084] ERROR    [!] Fail to hook ws2_32.dll.WSARecv()[0x71a24cb5]: Failed setting breakpoint at 71a24cb5
+[2017-03-24 11:28:49,115] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpen()[0x4a41963e]: Failed setting breakpoint at 4a41963e
+[2017-03-24 11:28:49,223] ERROR    [!] Fail to hook winhttp.dll.WinHttpConnect()[0x4a4199a5]: Failed setting breakpoint at 4a4199a5
+[2017-03-24 11:28:49,348] ERROR    [!] Fail to hook winhttp.dll.WinHttpOpenRequest()[0x4a4337cc]: Failed setting breakpoint at 4a4337cc
+[2017-03-24 11:28:49,520] ERROR    [!] Fail to hook winhttp.dll.WinHttpSendRequest()[0x4a420281]: Failed setting breakpoint at 4a420281
+[2017-03-24 11:28:49,631] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExA()[0x77da7842]: Failed setting breakpoint at 77da7842
+[2017-03-24 11:28:49,631] ERROR    [!] Fail to hook Advapi32.dll.RegOpenKeyExW()[0x77da6a9f]: Failed setting breakpoint at 77da6a9f
+[2017-03-24 11:28:49,631] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExA()[0x77dae9e4]: Failed setting breakpoint at 77dae9e4
+[2017-03-24 11:28:49,631] ERROR    [!] Fail to hook Advapi32.dll.RegCreateKeyExW()[0x77da775c]: Failed setting breakpoint at 77da775c
+[2017-03-24 11:28:49,631] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExA()[0x77daead7]: Failed setting breakpoint at 77daead7
+[2017-03-24 11:28:49,645] ERROR    [!] Fail to hook Advapi32.dll.RegSetValueExW()[0x77dad757]: Failed setting breakpoint at 77dad757
+[2017-03-24 11:28:49,645] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExA()[0x77da7aab]: Failed setting breakpoint at 77da7aab
+[2017-03-24 11:28:49,661] ERROR    [!] Fail to hook Advapi32.dll.RegQueryValueExW()[0x77da6fef]: Failed setting breakpoint at 77da6fef
+[2017-03-24 11:28:49,661] DEBUG    22 functions, 6 hook success.
+[2017-03-24 11:28:49,895] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\imm32.dll
+[2017-03-24 11:28:50,131] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\advapi32.dll
+[2017-03-24 11:28:50,490] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\rpcrt4.dll
+[2017-03-24 11:28:50,723] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\secur32.dll
+[2017-03-24 11:28:50,881] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\lpk.dll
+[2017-03-24 11:28:51,834] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\usp10.dll
+[2017-03-24 11:28:52,927] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\MSCTF.dll
+[2017-03-24 11:28:53,381] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\msvcrt.dll
+[2017-03-24 11:28:54,865] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\version.dll
+[2017-03-24 11:28:54,927] INFO     < 3224: 3420> Unload DLL \WINDOWS\system32\version.dll 
+[2017-03-24 11:28:54,959] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\MSCTFIME.IME
+[2017-03-24 11:28:55,145] INFO     < 3224: 3420> Load DLL \WINDOWS\system32\ole32.dll
+[2017-03-25 16:07:22,869] INFO     < 3224: 1920> New thread..  
+[2017-03-25 16:07:22,979] INFO     < 3224: 1920> Load DLL \WINDOWS\system32\console.dll
+[2017-03-25 16:07:23,009] INFO     < 3224: 1920> Load DLL \WINDOWS\system32\comctl32.dll
+[2017-03-25 16:07:23,026] INFO     < 3224: 1920> Load DLL \WINDOWS\system32\shell32.dll
+[2017-03-25 16:07:23,056] INFO     < 3224: 1920> Load DLL \WINDOWS\system32\shlwapi.dll
+[2017-03-25 16:07:23,088] INFO     < 3224: 1920> Load DLL \WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
+[2017-03-25 16:07:25,494] INFO     < 3224: 1920> Unload DLL \WINDOWS\system32\console.dll 
+[2017-03-25 16:07:25,509] INFO     < 3224: 1920> Unload DLL \WINDOWS\system32\shell32.dll 
+[2017-03-25 16:07:25,509] INFO     < 3224: 1920> Exit thread.. 
+[2017-03-25 17:34:41,634] INFO     < 3224: 3696> New thread..  
+[2017-03-25 17:34:41,884] INFO     < 3224: 3420> Exit thread.. 
+[2017-03-25 17:34:41,901] INFO     < 3224: 3696> Exit process.. 

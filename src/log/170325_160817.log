@@ -1,0 +1,7 @@
+[2017-03-25 16:08:17,151] INFO     <  272: 1128> New process.. 
+[2017-03-25 16:08:17,197] INFO     <  272: 1128> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-25 16:08:17,213] INFO     <  272: 1128> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-25 16:08:17,276] INFO     <  272: 1128> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-25 16:08:17,292] INFO     <  272: 1128> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-25 16:08:17,306] DEBUG    Pydbg breakpoint hits!
+[2017-03-25 16:08:17,306] DEBUG    <  272: 1128> [*] Pydbg first point at 0x7c92120f, HookPoints init...

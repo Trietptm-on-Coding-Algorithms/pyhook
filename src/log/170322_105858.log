@@ -1,0 +1,8 @@
+[2017-03-22 10:58:58,487] INFO     < 1820: 1508> New process.. 
+[2017-03-22 10:58:58,519] INFO     < 1820: 1508> Load DLL \WINDOWS\system32\ntdll.dll
+[2017-03-22 10:58:58,551] INFO     < 1820: 1508> Load DLL \WINDOWS\system32\kernel32.dll
+[2017-03-22 10:58:58,628] INFO     < 1820: 1508> Load DLL \WINDOWS\system32\user32.dll
+[2017-03-22 10:58:58,644] INFO     < 1820: 1508> Load DLL \WINDOWS\system32\gdi32.dll
+[2017-03-22 10:58:58,644] DEBUG    Pydbg breakpoint hits!
+[2017-03-22 10:58:58,644] DEBUG    < 1820: 1508> [*] Pydbg first point at 0x7c92120f, HookPoints init...
+[2017-03-22 11:03:50,082] ERROR    [!] Fail to hook ws2_32.dll.send()[0x71a24c27]: Failed setting breakpoint at 71a24c27
