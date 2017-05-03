@@ -71,7 +71,7 @@ class HookContext:
 				args[arg_name] = dbg.get_register(arg_type)
 		return args
 
-	def get_value(self, s):
+	def get_value(self, dbg,s):
 		# Accept register name("EAX","EBX",etc) and arguments name("buf","lpFileName")
 		if self.is_reg(s):
 			s = dbg.get_register(s)

@@ -7,18 +7,40 @@ from pydbg.defines import *
 from database import *
 from hook_function import *
 from hook_point import *
-from hook_manager import *
+#from hook_manager import *
 from info_manager import *
-
-
+from test import *
+from hooking import *
 def init_at_first_bp(dbg):
 	log.d("[*] Pydbg first point at %#x, HookPoints init..."% dbg.context.Eip, dbg)
 	#print dbg.disasm_around(dbg.context.Eip)
-	hook_man.start_hook(dbg)
-
+	#hook_man.start_hook(dbg)
+	dlls = dbg.system_dlls
+	for dll in dlls:
+		if API.has_key(dll.name):
+			for i in API[dll.name]:
+				#address = dbg.func_resolve_debuggee(dll.name, i)
+				for j in list_api:
+					if j.name == i:
+						try:
+							if j.both_charset == True:
+								address = dbg.func_resolve_debuggee(dll.name, i+'A')
+								assert address!= None
+								hc.add(dbg,address,j,'A')
+								address = dbg.func_resolve_debuggee(dll.name, i+'W')
+								assert address!= None
+								hc.add(dbg,address,j,'W')
+							else:
+								address = dbg.func_resolve_debuggee(dll.name, i)
+								hc.add(dbg,address,j)
+								assert address!= None
+							break
+						except Exception,e:
+							print j.name,dll.name,address
 def handler_breakpoint(dbg):
 	log.d("Pydbg breakpoint hits!")
 	if dbg.first_breakpoint:
+		pass
 		init_at_first_bp(dbg)	
 
 	return DBG_CONTINUE
@@ -56,10 +78,20 @@ def handler_load_dll(dbg):
 
 	info = LoadDllInfo(dbg.pid, dbg.tid, path=dll.path)
 	info.save()
-
+	dbg.single_step(True)
 	log.i(info.brief_info(), dbg)
-	
+# 	if API.has_key(dll.name):
+# 		for i in API[dll.name]:
+# 			address = dbg.func_resolve_debuggee(dll.name, i)
+# 			print 'address',address
+# 			address = dbg.func_resolve_debuggee(dll.name, i)
+# 			for j in list_api:
+# 				if j.name == i:
+# 					
+# 					hc.add(dbg,address,j)
+# 					break
 	return DBG_CONTINUE
+
 
 def handler_unload_dll(dbg):
 	base = dbg.dbg.u.UnloadDll.lpBaseOfDll

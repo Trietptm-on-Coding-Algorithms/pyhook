@@ -41,19 +41,19 @@ class DbgInfo:
 		'''
 		# To avoid save twice.
 		print self.category, self.pid, self.tid, self.timestamp, self.tag, self.brief_info()
-		if force or not self.timestamp:
-			self.timestamp = datetime.datetime.now()
-			#info_man.add_dbginfo(self)
-			
-			data = [self.category,self.pid,self.tid,self.timestamp,self.tag]+[self.brief_info()]
-			if self.category =='Hook Functions':
-				data_man.update(self.category,data,self.detail_info())			
-			elif self.category == 'Events':
-				data_man.update(self.category,data,self.detail_info())
-			elif self.tag == 'LoadDllInfo':
-                                data_man.update(self.category,data,[str(self.path)])
-			else:
-				data_man.update(self.category,data)	
+# 		if force or not self.timestamp:
+# 			self.timestamp = datetime.datetime.now()
+# 			#info_man.add_dbginfo(self)
+# 			
+# 			data = [self.category,self.pid,self.tid,self.timestamp,self.tag]+[self.brief_info()]
+# 			if self.category =='Hook Functions':
+# 				data_man.update(self.category,data,self.detail_info())			
+# 			elif self.category == 'Events':
+# 				data_man.update(self.category,data,self.detail_info())
+# 			elif self.tag == 'LoadDllInfo':
+#                 data_man.update(self.category,data,[str(self.path)])
+# 			else:
+# 				data_man.update(self.category,data)	
 
 	# InfoManager call this to generate HTML report.
 	# Sub class should not rewrite this.

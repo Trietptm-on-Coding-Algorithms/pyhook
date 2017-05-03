@@ -23,7 +23,7 @@
 @contact:      pedram.amini@gmail.com
 @organization: www.openrce.org
 '''
-
+import code
 import os.path
 import sys
 import copy
@@ -581,6 +581,7 @@ class pydbg:
                 # add the breakpoint to the internal list.
                 self.breakpoints[address] = breakpoint(address, original_byte, description, restore, handler)
             except:
+                code.interact(banner="",local=locals())
                 raise pdx("Failed setting breakpoint at %08x" % address)
 
         return self.ret_self()

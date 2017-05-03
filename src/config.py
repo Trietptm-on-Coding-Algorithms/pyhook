@@ -1,7 +1,9 @@
-
+#coding=utf-8
 from report import *
-
-EXE_PATH = r"C:\Program Files\Microsoft Visual Studio\MyProjects\messagebox\Debug\messagebox.exe"
+xingyun = r'D:\\Xingyun1.6.1\\XingYun.exe'
+lvdou = r"D:\\lvdou\\LvDou.exe"
+feifan = r'D:\\feifanvpn.exe'
+EXE_PATH = feifan
 EXE_CMD = None
 
 # File Path
