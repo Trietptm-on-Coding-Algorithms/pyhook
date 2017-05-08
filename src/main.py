@@ -16,6 +16,7 @@ def init_at_first_bp(dbg):
 	#print dbg.disasm_around(dbg.context.Eip)
 	#hook_man.start_hook(dbg)
 	dlls = dbg.system_dlls
+	is_api = True
 	for dll in dlls:
 		if API.has_key(dll.name):
 			for i in API[dll.name]:
@@ -26,17 +27,20 @@ def init_at_first_bp(dbg):
 							if j.both_charset == True:
 								address = dbg.func_resolve_debuggee(dll.name, i+'A')
 								assert address!= None
-								hc.add(dbg,address,j,'A')
+								hc.add(dbg,address,j,is_api,'A')
 								address = dbg.func_resolve_debuggee(dll.name, i+'W')
 								assert address!= None
-								hc.add(dbg,address,j,'W')
+								hc.add(dbg,address,j,is_api,'W')
 							else:
 								address = dbg.func_resolve_debuggee(dll.name, i)
-								hc.add(dbg,address,j)
+								hc.add(dbg,address,j,is_api)
 								assert address!= None
 							break
 						except Exception,e:
 							print j.name,dll.name,address
+	is_api = False
+	for i in list_func:
+		hc.add(dbg,i.address,i,is_api)
 def handler_breakpoint(dbg):
 	log.d("Pydbg breakpoint hits!")
 	if dbg.first_breakpoint:

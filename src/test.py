@@ -1,4 +1,5 @@
 #coding=utf8
+import sqlite3
 from lxml import etree
 from ctypes import *
 import os
@@ -272,7 +273,7 @@ def testall():
             #print a
 def testPar():
     a = Param_Info('lpSubKey','ACL',None,None,'Headers\security.h.xml')
-    print a.size
+
 
 list_type = []
 #testall()
@@ -283,4 +284,24 @@ def load_api():
             print func
             a = API_Info(func,dll)
             list_api.append(a)
-load_api()
+def load_func():
+    txt = open('func.txt','r')
+    line = txt.readline()
+    while line!='':
+        name,addr = line.split(' ')
+        print name
+        a = Func_Info(name,int(addr,16))
+        list_func.append(a)
+        line = txt.readline()
+    txt.close()
+list_func = []
+#load_api()
+load_func()
+
+cu = sqlite3.connect('a.db')
+try:
+    cu.execute("create table api (id integer primary key,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text)")
+    cu.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+    
+except Exception,e:
+    pass
