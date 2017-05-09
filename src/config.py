@@ -1,9 +1,9 @@
 #coding=utf-8
 from report import *
-xingyun = r'D:\\Xingyun1.6.1\\XingYun.exe'
+maze = r'D:\\maze.exe'#410R3R5R7363178848687
 lvdou = r"D:\\lvdou\\LvDou.exe"
 feifan = r'D:\\feifanvpn.exe'
-EXE_PATH = feifan
+EXE_PATH = maze
 EXE_CMD = None
 
 # File Path

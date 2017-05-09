@@ -189,9 +189,10 @@ class Param_Info():
                 
 
 class Func_Info():
-    def __init__(self,name,address,reg_list = None,par_num = 3):
+    def __init__(self,name,address,end,reg_list = None,par_num = 3):
         self.name = name 
         self.address = address 
+        self.end = end
         self.reg_list = reg_list
         self.par_num = par_num
         
@@ -288,9 +289,9 @@ def load_func():
     txt = open('func.txt','r')
     line = txt.readline()
     while line!='':
-        name,addr = line.split(' ')
+        name,addr,end = line.split(' ')
         print name
-        a = Func_Info(name,int(addr,16))
+        a = Func_Info(name,int(addr,16),int(end,16))
         list_func.append(a)
         line = txt.readline()
     txt.close()
@@ -298,10 +299,15 @@ list_func = []
 #load_api()
 load_func()
 
-cu = sqlite3.connect('a.db')
+conn = sqlite3.connect('a.db')
 try:
-    cu.execute("create table api (id integer primary key,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text)")
-    cu.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+    conn.execute("create table api (id integer primary key,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text)")
+    conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
     
 except Exception,e:
+    conn.execute("drop table api")
+    conn.execute("drop table param")
+    conn.execute("create table api (id integer primary key,depth integer,pid integer,tid integer,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text,is_api boolean)")
+    conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+    
     pass

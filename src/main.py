@@ -1,13 +1,11 @@
-import cPickle
+
 
 from pydbg import *
 from pydbg.defines import *
+from info import *
 
-#import log
 from database import *
-from hook_function import *
-from hook_point import *
-#from hook_manager import *
+
 from info_manager import *
 from test import *
 from hooking import *
@@ -41,6 +39,7 @@ def init_at_first_bp(dbg):
 	is_api = False
 	for i in list_func:
 		hc.add(dbg,i.address,i,is_api)
+		
 def handler_breakpoint(dbg):
 	log.d("Pydbg breakpoint hits!")
 	if dbg.first_breakpoint:
@@ -184,7 +183,8 @@ def main():
 	#info_man.load()
 	#info_man.gen_report()
 	#info_man.open_report()
-
+	conn.commit()
+	conn.close()
 	print "-------END---------"
 
 
