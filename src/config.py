@@ -3,7 +3,7 @@ from report import *
 maze = r'D:\\maze.exe'#410R3R5R7363178848687
 lvdou = r"D:\\lvdou\\LvDou.exe"
 feifan = r'D:\\feifanvpn.exe'
-EXE_PATH = maze
+EXE_PATH = feifan
 EXE_CMD = None
 
 # File Path

@@ -5,6 +5,7 @@ from ctypes import *
 import os
 from __builtin__ import False
 from pip._vendor.distlib._backport.tarfile import LENGTH_LINK
+import base64
 
 # API={'ws2_32.dll':['send','WSASend','recv','WSARecv','gethostbyname'],
 #     'winhttp.dll':['WinHttpOpen','WinHttpConnect','WinHttpOpenRequest','WinHttpSendRequest'],
@@ -221,7 +222,7 @@ class API_Info():
             self.param[i]=par_info
             i+=1
         ret = api.find('Return')
-        self.ret = Param_Info(None,ret.attrib['Type'],None,None,self.xml)
+        self.ret = Param_Info('return',ret.attrib['Type'],None,None,self.xml)
         
         
     def get_xml(self,dll):
@@ -296,8 +297,8 @@ def load_func():
         line = txt.readline()
     txt.close()
 list_func = []
-#load_api()
-load_func()
+load_api()
+#Qload_func()
 class Data_Manager():
     
     quote_id = 0
@@ -398,13 +399,20 @@ class Data_Manager():
                           +str(Data_Manager.quote_id)+","+str(len)+",'"+string+"')")
         except Exception,e:
             print e
-            print string
-            print len
-            for i in string:
-                print str(i),
-            print "insert into quote(id , len , data) values("\
-            +str(Data_Manager.quote_id)+","+str(len)+",'"+string+"')"
-            input()
+            if str(e)=='the query contains a null character':
+                print 'yes'
+                temp = base64.encodestring(string)
+                self.conn.execute("insert into quote(id , len , data, base64) values("
+                          +str(Data_Manager.quote_id)+","+str(len)+",'"+temp+"',1)")
+#             print string
+#             print len
+#             for i in string:
+#                 print str(i),
+#             print "insert into quote(id , len , data) values("\
+#             +str(Data_Manager.quote_id)+","+str(len)+",'"+string+"')"
+            
+    def commit(self):
+        self.conn.commit()
     def close(self):
         self.conn.commit()
         self.conn.close()
