@@ -4,7 +4,6 @@ from pydbg import *
 from pydbg.defines import *
 from info import *
 
-from database import *
 
 from info_manager import *
 from test import *
@@ -177,14 +176,13 @@ def load_dbg():
 
 def main():
 	log.log_init()
-	data_man.init()
+	#data_man.init()
 	load_dbg()	
 	#info_man.dump()
 	#info_man.load()
 	#info_man.gen_report()
 	#info_man.open_report()
-	conn.commit()
-	conn.close()
+	data_man.close()
 	print "-------END---------"
 
 

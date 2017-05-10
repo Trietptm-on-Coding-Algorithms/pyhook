@@ -241,11 +241,11 @@ class API_Info():
 NORMAL=0
 STRING=1
 UNICODE_STRING=2
-PDWORD=3
-BUFFER=4
-STRUCT=5
+TCHARACTER=3
+PDWORD=4
+BUFFER=5
+STRUCT=7
 PSTRUCT=6
-TCHARACTER=7
 UNKNOWN=8
 Pointer_SIZE=4
 def debug_print(aaa):
@@ -298,16 +298,126 @@ def load_func():
 list_func = []
 #load_api()
 load_func()
-
-conn = sqlite3.connect('a.db')
-try:
-    conn.execute("create table api (id integer primary key,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text)")
-    conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+class Data_Manager():
     
-except Exception,e:
-    conn.execute("drop table api")
-    conn.execute("drop table param")
-    conn.execute("create table api (id integer primary key,depth integer,pid integer,tid integer,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text,is_api boolean)")
-    conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+    quote_id = 0
+    def __init__(self):
+        self.conn = sqlite3.connect('a.db')
+        try:
+            self.conn.execute(
+            '''create table api (
+                id integer primary key,
+                depth integer,
+                pid integer,
+                tid integer,
+                fid integer,
+                first_son_id integer,
+                last_son_id integer,
+                name varchar(20),
+                address integer,
+                is_api boolean,
+                time text
+                )
+            '''
+            )
+            self.conn.execute(
+            '''create table param(
+                id integer primary key AUTOINCREMENT,
+                api_id integer,
+                api_name varchar(20),
+                param_name varchar(20),
+                stack_value integer,
+                type varchar(20),
+                final_type integer,
+                further_value_int integer,
+                quote_id integer,
+                is_entry boolean
+                )
+            '''
+            )
+            self.conn.execute(
+            '''create table quote(
+                id integer primary key,
+                len integer,
+                data text,
+                base64 boolean
+                )
+            '''
+            )
+        except Exception,e:
+            self.conn.execute("drop table api")
+            self.conn.execute("drop table param")
+            self.conn.execute("drop table quote")
+            self.conn.execute(
+            '''create table api (
+                id integer primary key,
+                depth integer,
+                pid integer,
+                tid integer,
+                fid integer,
+                first_son_id integer,
+                last_son_id integer,
+                name varchar(20),
+                address integer,
+                is_api boolean,
+                time text
+                )
+            '''
+            )
+            self.conn.execute(
+            '''create table param(
+                id integer primary key AUTOINCREMENT,
+                api_id integer,
+                api_name varchar(20),
+                param_name varchar(20),
+                stack_value integer,
+                type varchar(20),
+                final_type integer,
+                further_value_int integer,
+                quote_id integer,
+                is_entry boolean
+                )
+            '''
+            )
+            self.conn.execute(
+            '''create table quote(
+                id integer primary key,
+                len integer,
+                data text,
+                base64 boolean
+                )
+            '''
+            )
     
-    pass
+    def update_quote(self,param_id,len,string):
+        Data_Manager.quote_id+=1
+        self.conn.execute("update param set quote_id = "
+                          +str(Data_Manager.quote_id)+" where id = "+str(param_id))
+        try:
+            self.conn.execute("insert into quote(id , len , data) values("
+                          +str(Data_Manager.quote_id)+","+str(len)+",'"+string+"')")
+        except Exception,e:
+            print e
+            print string
+            print len
+            for i in string:
+                print str(i),
+            print "insert into quote(id , len , data) values("\
+            +str(Data_Manager.quote_id)+","+str(len)+",'"+string+"')"
+            input()
+    def close(self):
+        self.conn.commit()
+        self.conn.close()
+data_man = Data_Manager()
+# conn = sqlite3.connect('a.db')
+# try:
+#     conn.execute("create table api (id integer primary key,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text)")
+#     conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+#     
+# except Exception,e:
+#     conn.execute("drop table api")
+#     conn.execute("drop table param")
+#     conn.execute("create table api (id integer primary key,depth integer,pid integer,tid integer,fid integer,first_son_id integer,last_son_id integer,name varchar(20),address integer,time text,is_api boolean)")
+#     conn.execute("create table param(id integer,api_name varchar(20),param_name varchar(20),stackvalue integer,type varchar(20),final_type integer,further_value_int integer,further_value_text text,is_entry boolean)")
+#     
+#     pass

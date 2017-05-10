@@ -98,4 +98,4 @@ class my_sqlite:
     def close(self):
         self.conn.close()
                
-data_man = my_sqlite()
+#data_man = my_sqlite()
