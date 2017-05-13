@@ -581,6 +581,7 @@ class pydbg:
                 # add the breakpoint to the internal list.
                 self.breakpoints[address] = breakpoint(address, original_byte, description, restore, handler)
             except:
+                print 'pydbg584'
                 code.interact(banner="",local=locals())
                 raise pdx("Failed setting breakpoint at %08x" % address)
 

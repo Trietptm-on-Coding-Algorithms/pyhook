@@ -1,8 +1,10 @@
 #coding=utf-8
 from report import *
 maze = r'D:\\maze.exe'#410R3R5R7363178848687
-lvdou = r"D:\\lvdou\\LvDou.exe"
+lvdou = r"D:\\lvdou\\LvDou.exe"#第二次设置send断点时失败
 feifan = r'D:\\feifanvpn.exe'
+ut = r"D:\\uTorrent.exe"
+_52 = r"D:\\52pojie.exe"
 EXE_PATH = feifan
 EXE_CMD = None
 

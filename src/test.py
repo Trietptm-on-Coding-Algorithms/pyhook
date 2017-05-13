@@ -14,7 +14,8 @@ import base64
 #     'advapi32.dll':['RegOpenKeyEx','RegCreateKeyEx','RegSetValueEx','RegQueryValueEx','CreateService']}
 API={
     #'kernel32.dll':['CreateFile','WriteFile','MoveFile','CopyFile','ReplaceFile','GetTempFileName','WinExec']
-    'ws2_32.dll':['send','WSASend','recv','WSARecv','gethostbyname']
+    'ws2_32.dll':['send','WSASend','recv','WSARecv','gethostbyname'],
+                  'winhttp.dll':['WinHttpOpen','WinHttpConnect','WinHttpOpenRequest','WinHttpSendRequest']
     }
 
 class Type_Info():
