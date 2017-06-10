@@ -6,8 +6,8 @@ from info import *
 
 
 from info_manager import *
-from test import *
 from hooking import *
+
 def init_at_first_bp(dbg):
 	log.d("[*] Pydbg first point at %#x, HookPoints init..."% dbg.context.Eip, dbg)
 	#print dbg.disasm_around(dbg.context.Eip)
@@ -185,6 +185,39 @@ def main():
 	data_man.close()
 	print "-------END---------"
 
+API={
+    'kernel32.dll':['CreateFile','WriteFile','MoveFile','CopyFile','ReplaceFile','GetTempFileName','WinExec'],
+    'ws2_32.dll':['send','WSASend','recv','WSARecv','gethostbyname','bind','WSAConnect'],
+    'winhttp.dll':['WinHttpOpen','WinHttpConnect','WinHttpOpenRequest','WinHttpSendRequest'],
+    #'advapi32.dll':['RegOpenKeyEx','RegCreateKeyEx','RegSetValueEx','RegQueryValueEx','CreateService'],
+    'user32.dll':['GetWindowText','GetDlgItemText']#,'IsWindowVisible']
+    }
 
+
+
+def load_api():
+	for dll in API:
+		for func in API[dll]:
+			print func
+			a = API_Info(func,dll)
+			list_api.append(a)
+def load_func():
+	txt = open('func.txt','r')
+	line = txt.readline()
+	while line!='':
+		name,addr,end = line.split(' ')
+		print name
+		a = Func_Info(name,int(addr,16),int(end,16))
+		list_func.append(a)
+		line = txt.readline()
+	txt.close()
+
+
+
+
+
+list_api = []
+list_func = []
+load_api()
 if __name__ == '__main__':
 	main()

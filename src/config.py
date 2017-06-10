@@ -5,7 +5,8 @@ lvdou = r"D:\\lvdou\\LvDou.exe"#第二次设置send断点时失败
 feifan = r'D:\\feifanvpn.exe'
 ut = r"D:\\uTorrent.exe"
 _52 = r"D:\\52pojie.exe"
-EXE_PATH = feifan
+fourwei = r'D:\\4wei\\6.1\\siwei.exe'
+EXE_PATH = fourwei
 EXE_CMD = None
 
 # File Path
